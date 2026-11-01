@@ -167,22 +167,33 @@
     }
 
     /* Leaflet Custom Pin */
+    .dxb-custom-div-icon {
+      background: transparent !important;
+      border: none !important;
+    }
     .dxb-map-pin {
-      background: #7A5A1E;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      width: max-content;
+      transform: translate(-50%, -50%);
+      background: #14201B;
       color: #FFFDF8;
-      border: 2px solid #FFFDF8;
+      border: 1.5px solid #D9B76F;
       border-radius: 999px;
-      padding: 3px 8px;
+      padding: 4px 10px;
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 700;
+      line-height: 1.1;
       white-space: nowrap;
       box-shadow: 0 6px 16px rgba(0,0,0,0.35);
       cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     }
     .dxb-map-pin:hover, .dxb-map-pin.active-pin {
-      background: #10B981;
-      transform: scale(1.12);
+      background: #7A5A1E;
+      border-color: #FFFDF8;
+      transform: translate(-50%, -50%) scale(1.1);
       z-index: 999 !important;
     }
   </style>
@@ -198,40 +209,37 @@
     </div>
   </div>
 
-  <!-- STICKY LUXURY HEADER -->
+  <!-- STICKY LUXURY HEADER (Clean & Uncluttered) -->
   <header class="sticky top-0 z-40 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2">
-      <!-- Brand Identity -->
-      <a href="#" class="flex items-center gap-3 group min-w-0">
-        <div class="w-11 h-11 rounded-2xl flex items-center justify-center font-editorial text-lg font-semibold tracking-tighter border shrink-0" style="background-color: var(--bg-elevated); border-color: var(--accent-brass); color: var(--accent-brass);">
-          DR
-        </div>
-        <div class="min-w-0">
-          <span class="block font-editorial text-base sm:text-lg font-semibold tracking-tight leading-none truncate">David Rodríguez</span>
-          <span class="block text-[10px] sm:text-xs uppercase tracking-[0.16em] mt-1 truncate" style="color: var(--accent-brass);" data-i18n="brand_subtitle">Dubai Luxury Real Estate & Investment Advisor</span>
-        </div>
-      </a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Left: Drawer Button + Brand Identity -->
+      <div class="flex items-center gap-3 min-w-0">
+        <button id="mobile-menu-btn" type="button" aria-label="Menú de Navegación" class="w-10 h-10 rounded-full flex items-center justify-center border shrink-0 hover:opacity-80 transition" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden xl:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider" style="color: var(--text-secondary);">
-        <a href="#spotlight-rockefeller" class="hover:opacity-75 transition" style="color: var(--accent-brass);">★ Lanzamiento Rockefeller</a>
-        <a href="#dxb-map-section" class="hover:opacity-75 transition">Mapa DXB Interact</a>
-        <a href="#roi-appreciation-section" class="hover:opacity-75 transition">Mayor ROI & Plusvalía</a>
-        <a href="#recommended-launches" class="hover:opacity-75 transition">DAMAC • Emaar • Binghatti • Imtiaz</a>
-        <a href="#vip-order-section" class="hover:opacity-75 transition">Suscripción & Pedidos</a>
-      </nav>
+        <a href="#" class="flex items-center gap-3 group min-w-0">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center font-editorial text-base font-semibold tracking-tighter border shrink-0" style="background-color: var(--bg-elevated); border-color: var(--accent-brass); color: var(--accent-brass);">
+            DR
+          </div>
+          <div class="min-w-0">
+            <span class="block font-editorial text-base sm:text-lg font-semibold tracking-tight leading-none truncate">David Rodríguez</span>
+            <span class="block text-[10px] sm:text-[11px] uppercase tracking-[0.14em] mt-1 truncate" style="color: var(--accent-brass);" data-i18n="brand_subtitle">Dubai Luxury Real Estate & Investment Advisor</span>
+          </div>
+        </a>
+      </div>
 
-      <!-- Controls: Currency, Language, Theme, Admin Pill, WhatsApp Icon-Only, Book CTA -->
-      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+      <!-- Right Controls: Currency, Language, Theme, WhatsApp Icon-Only, Book CTA -->
+      <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
         <!-- Currency Switcher -->
-        <select id="currency-select" aria-label="Divisa" class="text-xs font-semibold rounded-full px-2.5 py-1.5 border bg-transparent cursor-pointer focus:outline-none" style="border-color: var(--border-subtle); color: var(--text-primary);">
+        <select id="currency-select" aria-label="Divisa" class="text-xs font-semibold rounded-full px-3 py-1.5 border bg-transparent cursor-pointer focus:outline-none" style="border-color: var(--border-subtle); color: var(--text-primary);">
           <option value="EUR" class="bg-[#FFFDF8] text-[#14201B]">EUR (€)</option>
           <option value="AED" class="bg-[#FFFDF8] text-[#14201B]">AED</option>
           <option value="USD" class="bg-[#FFFDF8] text-[#14201B]">USD ($)</option>
         </select>
 
         <!-- Language Switcher -->
-        <select id="lang-select" aria-label="Idioma" class="text-xs font-semibold rounded-full px-2.5 py-1.5 border bg-transparent cursor-pointer focus:outline-none" style="border-color: var(--border-subtle); color: var(--text-primary);">
+        <select id="lang-select" aria-label="Idioma" class="text-xs font-semibold rounded-full px-3 py-1.5 border bg-transparent cursor-pointer focus:outline-none" style="border-color: var(--border-subtle); color: var(--text-primary);">
           <option value="es" class="bg-[#FFFDF8] text-[#14201B]">ES</option>
           <option value="en" class="bg-[#FFFDF8] text-[#14201B]">EN</option>
           <option value="ar" class="bg-[#FFFDF8] text-[#14201B]">AR</option>
@@ -243,10 +251,10 @@
           <svg id="icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <!-- Golden Admin Pill -->
-        <button id="admin-header-btn" type="button" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border transition" style="border-color: var(--accent-brass); color: var(--accent-brass); background-color: var(--bg-surface);">
+        <!-- Golden Admin Pill (Unlocked only after Admin login per Rule 6.1) -->
+        <button id="admin-header-btn" type="button" class="hidden items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border transition" style="border-color: var(--accent-brass); color: var(--accent-brass); background-color: var(--bg-surface);">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-          <span id="admin-pill-label">Admin</span>
+          <span id="admin-pill-label">★ Admin</span>
         </button>
 
         <!-- WhatsApp Button: STRICTLY ICON ONLY (Rule 5) -->
@@ -255,22 +263,17 @@
         </a>
 
         <!-- Primary Action Button -->
-        <a href="#vip-order-section" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase btn-brass" data-i18n="btn_book">
+        <a href="#vip-order-section" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase btn-brass" data-i18n="btn_book">
           Reservar Cita
         </a>
-
-        <!-- Mobile Drawer Button -->
-        <button id="mobile-menu-btn" type="button" aria-label="Menú" class="xl:hidden w-10 h-10 rounded-full flex items-center justify-center border" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE SLIDE-OUT DRAWER (Rule 8: Ergonomic Thumb-Friendly Drawer) -->
+  <!-- SLIDE-OUT NAVIGATION DRAWER (Rule 8: Ergonomic Thumb-Friendly Drawer) -->
   <div id="mobile-drawer" class="fixed inset-0 z-50 hidden">
     <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
-    <div class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] p-6 flex flex-col justify-between shadow-2xl overflow-y-auto" style="background-color: var(--bg-surface); border-left: 1px solid var(--border-subtle);">
+    <div class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] p-6 flex flex-col justify-between shadow-2xl overflow-y-auto" style="background-color: var(--bg-surface); border-right: 1px solid var(--border-subtle);">
       <div>
         <div class="flex items-center justify-between pb-5 border-b" style="border-color: var(--border-subtle);">
           <div>
@@ -315,79 +318,61 @@
     <!-- Satin Adaptive Light/Dark Luxury Veil -->
     <div class="absolute inset-0 z-10" style="background: var(--hero-overlay);"></div>
 
-    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Left Column -->
-        <div class="lg:col-span-8 space-y-6">
-          <div class="flex flex-wrap items-center gap-2.5">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] border" style="background-color: var(--bg-surface); border-color: var(--accent-brass); color: var(--accent-brass);">
-              H.O.M.E Properties Dubai • DLD Certified Advisory
-            </span>
-            <button id="toggle-hero-sound" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
-              <span id="hero-sound-icon">🔇</span>
-              <span id="hero-sound-label">Activar Audio del Video</span>
-            </button>
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
+      <div class="max-w-4xl space-y-6">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] border" style="background-color: var(--bg-surface); border-color: var(--accent-brass); color: var(--accent-brass);">
+            H.O.M.E Properties Dubai • DLD Certified Advisory
+          </span>
+          <button id="toggle-hero-sound" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border transition" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+            <span id="hero-sound-icon">🔇</span>
+            <span id="hero-sound-label">Activar Audio del Video</span>
+          </button>
+        </div>
+
+        <h1 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.07] tracking-tight" data-i18n="hero_title">
+          Inversión Inmobiliaria de Élite en Dubái con <span class="italic font-semibold" style="color: var(--accent-brass);">Datos Reales DXB Interact</span> y 0% Impuestos.
+        </h1>
+
+        <p class="text-base sm:text-lg leading-relaxed max-w-3xl font-medium" style="color: var(--text-secondary);" data-i18n="hero_subtitle">
+          Accede a asignaciones de prelanzamiento (EOI) en activos trofeo como la <strong>Christian A. Rockefeller Business Tower</strong>, <strong>Azizi Milan</strong> y las nuevas colecciones de <strong>DAMAC, Emaar, Binghatti e Imtiaz</strong>. Custodia Escrow supervisada por el Gobierno de Dubái y Golden Visa de 10 años.
+        </p>
+
+        <!-- Key Metrics Pills -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-2">
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">8% – 11.4%</p>
+            <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">ROI Neto Libre de IRPF</p>
           </div>
-
-          <h1 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.07] tracking-tight" data-i18n="hero_title">
-            Inversión Inmobiliaria de Élite en Dubái con <span class="italic font-semibold" style="color: var(--accent-brass);">Datos Reales DXB Interact</span> y 0% Impuestos.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-2xl font-medium" style="color: var(--text-secondary);" data-i18n="hero_subtitle">
-            Accede a asignaciones de prelanzamiento (EOI) en activos trofeo como la <strong>Christian A. Rockefeller Business Tower</strong>, <strong>Azizi Milan</strong> y las nuevas colecciones de <strong>DAMAC, Emaar, Binghatti e Imtiaz</strong>. Custodia Escrow supervisada por el Gobierno de Dubái y Golden Visa de 10 años.
-          </p>
-
-          <!-- Key Metrics Pills -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
-            <div class="surface-card rounded-2xl p-4">
-              <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">8% – 11.4%</p>
-              <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">ROI Neto Libre de IRPF</p>
-            </div>
-            <div class="surface-card rounded-2xl p-4">
-              <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">+32% – 55%</p>
-              <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">Plusvalía Off-Plan Estimada</p>
-            </div>
-            <div class="surface-card rounded-2xl p-4">
-              <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">1% / mes</p>
-              <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">Planes de Pago sin Bancos</p>
-            </div>
-            <div class="surface-card rounded-2xl p-4">
-              <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">10 Años</p>
-              <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">Residencia Golden Visa EAU</p>
-            </div>
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">+32% – 55%</p>
+            <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">Plusvalía Off-Plan Estimada</p>
           </div>
-
-          <!-- Primary CTAs -->
-          <div class="flex flex-wrap items-center gap-3.5 pt-2">
-            <a href="#spotlight-rockefeller" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-brass shadow-lg">
-              ★ Ver Lanzamiento del Momento (Torre Rockefeller)
-            </a>
-            <a href="#dxb-map-section" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-pill-sand">
-              Explorar Mapa DXB Interact por Áreas
-            </a>
-            <a href="#vip-order-section" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-pill-sand" data-i18n="btn_book">
-              Reservar Cita
-            </a>
-            <!-- Icon-only WhatsApp CTA (Rule 5) -->
-            <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-12 h-12 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-lg hover:scale-105 transition">
-              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
-            </a>
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">1% / mes</p>
+            <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">Planes de Pago sin Bancos</p>
+          </div>
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">10 Años</p>
+            <p class="text-[11px] font-semibold mt-1" style="color: var(--text-secondary);">Residencia Golden Visa EAU</p>
           </div>
         </div>
 
-        <!-- Right Column: Advisor Card Preview -->
-        <div class="lg:col-span-4">
-          <div class="surface-card rounded-3xl p-4 max-w-sm mx-auto">
-            <div class="arch-frame overflow-hidden aspect-[4/5] relative">
-              <img id="hero-advisor-img" src="assets/rock_david-profile.png" onerror="this.src='assets/advisory_office_suite.jpg'" alt="David Rodríguez" class="w-full h-full object-cover object-top" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent"></div>
-              <div class="absolute bottom-4 left-4 right-4 text-white">
-                <span class="text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-amber-500/30 border border-amber-300/40 backdrop-blur-md">Senior Investment Advisor</span>
-                <p class="font-editorial text-2xl mt-1.5">David Rodríguez</p>
-                <p class="text-xs text-white/85">Asignaciones Directas Off-Plan & Comerciales • Dubái & Madrid</p>
-              </div>
-            </div>
-          </div>
+        <!-- Primary CTAs -->
+        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <a href="#spotlight-rockefeller" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-brass shadow-lg">
+            ★ Ver Lanzamiento del Momento (Torre Rockefeller)
+          </a>
+          <a href="#dxb-map-section" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-pill-sand">
+            Explorar Mapa DXB Interact por Áreas
+          </a>
+          <a href="#vip-order-section" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-pill-sand" data-i18n="btn_book">
+            Reservar Cita
+          </a>
+          <!-- Icon-only WhatsApp CTA (Rule 5) -->
+          <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-12 h-12 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-lg hover:scale-105 transition">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -1588,19 +1573,25 @@
         scrollWheelZoom: false
       });
 
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
         attribution: '&copy; OpenStreetMap &bull; DXB Interact DLD Index'
       }).addTo(dxbMap);
 
       DXB_AREAS_DATA.forEach(area => {
         const icon = L.divIcon({
-          className: '',
-          html: `<div id="pin-${area.id}" class="dxb-map-pin ${area.id === selectedAreaId ? 'active-pin' : ''}">${area.priceSqftAed.toLocaleString()} AED/ft² • ROI ${area.yieldPct}%</div>`
+          className: 'dxb-custom-div-icon',
+          iconSize: null,
+          html: `<div id="pin-${area.id}" class="dxb-map-pin ${area.id === selectedAreaId ? 'active-pin' : ''}"><span>${area.priceSqftAed.toLocaleString()} AED/ft²</span><span style="opacity:0.75;">•</span><span style="color:#34D399;">${area.yieldPct}%</span></div>`
         });
         const marker = L.marker([area.lat, area.lng], { icon }).addTo(dxbMap);
         marker.on('click', () => selectDxbArea(area.id));
         dxbMarkers[area.id] = marker;
       });
+
+      setTimeout(() => {
+        if (dxbMap) dxbMap.invalidateSize();
+      }, 250);
 
       renderDxbAreaDetails();
       renderDxbAreasTable(DXB_AREAS_DATA);
@@ -2070,7 +2061,12 @@
     document.getElementById('admin-login-form').addEventListener('submit', (e) => {
       e.preventDefault();
       isAdminUnlocked = true;
-      document.getElementById('admin-pill-label').textContent = '★ Panel Admin';
+      const adminBtn = document.getElementById('admin-header-btn');
+      if (adminBtn) {
+        adminBtn.classList.remove('hidden');
+        adminBtn.classList.add('inline-flex');
+      }
+      document.getElementById('admin-pill-label').textContent = '★ Admin';
       document.getElementById('admin-login-modal').classList.add('hidden');
       document.getElementById('admin-dashboard-modal').classList.remove('hidden');
     });
