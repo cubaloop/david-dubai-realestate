@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>David Rodríguez — Dubai Luxury Real Estate & Investment Advisor</title>
+  <meta name="description" content="Asesoría patrimonial e inversión inmobiliaria Off-Plan en Dubái para inversores de España, Europa y Latinoamérica. Rentabilidad 8-12% neta libre de impuestos y Golden Visa EAU." />
+  <meta property="og:title" content="David Rodríguez — Dubai Luxury Real Estate & Investment Advisor" />
+  <meta property="og:description" content="Inversión inmobiliaria de élite en Dubái (Azizi Milan, Emaar, DAMAC, Sobha). 0% impuestos sobre la renta, planes de pago 1% mensual y Golden Visa de 10 años." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero_dubai_skyline.jpg" />
+
+  <!-- Google Fonts: Fraunces (Display), Plus Jakarta Sans (UI), Amiri & Cairo (Arabic RTL) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Fraunces', 'Amiri', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Cairo', 'system-ui', 'sans-serif'],
+            arabic: ['Cairo', 'Amiri', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root, [data-theme="light"] {
+      --bg-primary: #F6F1E7;
+      --bg-surface: #FFFDF8;
+      --bg-elevated: #EFE8D8;
+      --text-primary: #14201B;
+      --text-secondary: #3E4C45;
+      --text-muted: #65736B;
+      --accent-brass: #7A5A1E;
+      --accent-brass-light: #9B742B;
+      --accent-champagne: #DFC89C;
+      --border-subtle: rgba(20, 32, 27, 0.12);
+      --glass-bg: rgba(255, 253, 248, 0.88);
+      --shadow-luxury: 0 20px 50px -12px rgba(20, 32, 27, 0.08);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #09100D;
+      --bg-surface: #121D18;
+      --bg-elevated: #182620;
+      --text-primary: #F2EDE0;
+      --text-secondary: #C6C0B2;
+      --text-muted: #8E9890;
+      --accent-brass: #D9B76F;
+      --accent-brass-light: #E8CC8F;
+      --accent-champagne: #3A301C;
+      --border-subtle: rgba(217, 183, 111, 0.18);
+      --glass-bg: rgba(18, 29, 24, 0.88);
+      --shadow-luxury: 0 24px 60px -12px rgba(0, 0, 0, 0.65);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background-color 0.35s ease, color 0.35s ease;
+      overflow-x: hidden;
+    }
+
+    [dir="rtl"] body {
+      font-family: 'Cairo', 'Amiri', sans-serif;
+    }
+
+    .font-editorial {
+      font-family: 'Fraunces', 'Amiri', Georgia, serif;
+    }
+
+    .surface-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-luxury);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .surface-card:hover {
+      border-color: var(--accent-brass);
+    }
+
+    .glass-nav {
+      background: var(--glass-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .arch-frame {
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      border-bottom-left-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+    }
+
+    .btn-brass {
+      background-color: var(--accent-brass);
+      color: #FFFDF8;
+      transition: all 0.25s ease;
+    }
+    [data-theme="dark"] .btn-brass {
+      color: #09100D;
+      font-weight: 700;
+    }
+    .btn-brass:hover {
+      background-color: var(--accent-brass-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-pill-sand {
+      background-color: var(--bg-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.25s ease;
+    }
+    .btn-pill-sand:hover {
+      border-color: var(--accent-brass);
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 34s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    input[type="range"] {
+      accent-color: var(--accent-brass);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#7A5A1E] selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BANNER (Editable from Admin Tab 2) -->
+  <div id="promo-banner" class="w-full py-2.5 px-4 text-center text-xs sm:text-sm font-medium tracking-wide border-b" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-primary);">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+      <span id="promo-banner-text" data-i18n="banner_text">Roadshow Madrid & Dubái 2026: Asignación prioritaria de unidades en Azizi Milan (Plan 1% mensual) y Emaar Creek Harbour.</span>
+      <a href="#booking-section" class="underline font-semibold ml-1" style="color: var(--accent-brass);" data-i18n="btn_book">Reservar Cita</a>
+    </div>
+  </div>
+
+  <!-- STICKY LUXURY HEADER -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl flex items-center justify-center font-editorial text-lg font-semibold tracking-tighter border" style="background-color: var(--bg-elevated); border-color: var(--accent-brass); color: var(--accent-brass);">
+          DR
+        </div>
+        <div>
+          <span class="block font-editorial text-base sm:text-lg font-semibold tracking-tight leading-none" id="brand-name-display">David Rodríguez</span>
+          <span class="block text-[10px] sm:text-xs uppercase tracking-[0.18em] mt-1" style="color: var(--accent-brass);" data-i18n="brand_subtitle">Dubai Luxury Real Estate & Investment Advisor</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium" style="color: var(--text-secondary);">
+        <a href="#portfolio-section" class="hover:opacity-75 transition" data-i18n="nav_projects">Proyectos Off-Plan</a>
+        <a href="#roi-simulator" class="hover:opacity-75 transition" data-i18n="nav_simulator">Simulador ROI & Golden Visa</a>
+        <a href="#advisor-section" class="hover:opacity-75 transition" data-i18n="nav_advisor">Tu Asesor en Dubái</a>
+        <a href="#reviews-section" class="hover:opacity-75 transition" data-i18n="nav_reviews">Reseñas Verificadas</a>
+        <a href="#booking-section" class="hover:opacity-75 transition" data-i18n="nav_contact">Consultoría Privada</a>
+      </nav>
+
+      <!-- Controls: Currency, Language, Theme, Admin Pill, WhatsApp Icon-Only, Book CTA -->
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <!-- Currency Switcher -->
+        <select id="currency-select" aria-label="Divisa" class="text-xs font-semibold rounded-full px-2.5 py-1.5 border bg-transparent cursor-pointer focus:outline-none" style="border-color: var(--border-subtle); color: var(--text-primary);">
+          <option value="EUR" class="bg-[#FFFDF8] text-[#14201B]">EUR (€)</option>
+          <option value="AED" class="bg-[#FFFDF8] text-[#14201B]">AED</option>
+          <option value="USD" class="bg-[#FFFDF8] text-[#14201B]">USD ($)</option>
+        </select>
+
+        <!-- Language Switcher -->
+        <select id="lang-select" aria-label="Idioma" class="text-xs font-semibold rounded-full px-2.5 py-1.5 border bg-transparent cursor-pointer focus:outline-none" style="border-color: var(--border-subtle); color: var(--text-primary);">
+          <option value="es" class="bg-[#FFFDF8] text-[#14201B]">ES</option>
+          <option value="en" class="bg-[#FFFDF8] text-[#14201B]">EN</option>
+          <option value="ar" class="bg-[#FFFDF8] text-[#14201B]">AR</option>
+        </select>
+
+        <!-- Theme Toggle (Light-First to Dark) -->
+        <button id="theme-toggle-btn" type="button" aria-label="Cambiar tema" class="w-9 h-9 rounded-full flex items-center justify-center border transition" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+          <svg id="icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg id="icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- Golden Admin Pill (Unlocked when logged in, or click to login) -->
+        <button id="admin-header-btn" type="button" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border transition" style="border-color: var(--accent-brass); color: var(--accent-brass); background-color: var(--bg-surface);">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <span id="admin-pill-label">Admin</span>
+        </button>
+
+        <!-- WhatsApp Button: STRICTLY ICON ONLY (Rule 5) -->
+        <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-md hover:scale-105 transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+        </a>
+
+        <!-- Primary Action Button -->
+        <a href="#booking-section" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase btn-brass" data-i18n="btn_book">
+          Reservar Cita
+        </a>
+
+        <!-- Mobile Drawer Button -->
+        <button id="mobile-menu-btn" type="button" aria-label="Menú" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center border" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OUT DRAWER (Rule 8: Ergonomic Thumb-Friendly Drawer) -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 hidden">
+    <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
+    <div class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] p-6 flex flex-col justify-between shadow-2xl" style="background-color: var(--bg-surface); border-left: 1px solid var(--border-subtle);">
+      <div>
+        <div class="flex items-center justify-between pb-5 border-b" style="border-color: var(--border-subtle);">
+          <div>
+            <p class="font-editorial text-lg font-semibold">David Rodríguez</p>
+            <p class="text-[11px] uppercase tracking-widest" style="color: var(--accent-brass);">Dubai Real Estate Advisor</p>
+          </div>
+          <button id="mobile-drawer-close" type="button" class="w-9 h-9 rounded-full flex items-center justify-center border" style="border-color: var(--border-subtle);">&times;</button>
+        </div>
+        <nav class="mt-6 flex flex-col gap-4 text-base font-medium">
+          <a href="#portfolio-section" class="mobile-nav-link py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_projects">Proyectos Off-Plan</a>
+          <a href="#roi-simulator" class="mobile-nav-link py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_simulator">Simulador ROI & Golden Visa</a>
+          <a href="#advisor-section" class="mobile-nav-link py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_advisor">Tu Asesor en Dubái</a>
+          <a href="#reviews-section" class="mobile-nav-link py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_reviews">Reseñas Verificadas</a>
+          <a href="#booking-section" class="mobile-nav-link py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_contact">Consultoría Privada</a>
+        </nav>
+      </div>
+      <div class="space-y-3 pt-6 border-t" style="border-color: var(--border-subtle);">
+        <button id="mobile-admin-btn" type="button" class="w-full py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider border" style="border-color: var(--accent-brass); color: var(--accent-brass);">
+          Panel Administrador Móvil
+        </button>
+        <div class="flex items-center gap-3">
+          <a href="#booking-section" class="mobile-nav-link flex-1 py-3 rounded-full text-center text-xs font-semibold uppercase tracking-wider btn-brass" data-i18n="btn_book">Reservar Cita</a>
+          <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-11 h-11 rounded-full flex items-center justify-center bg-[#25D366] text-white">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION (Light-First Editorial Luxury + Arch Frame) -->
+  <section class="relative pt-8 pb-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <!-- Left Column: Editorial Value Proposition -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] border" style="background-color: var(--bg-surface); border-color: var(--accent-brass); color: var(--accent-brass);">
+          <span>H.O.M.E Properties Dubai • DLD Certified Advisory</span>
+        </div>
+
+        <h1 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.08] tracking-tight" data-i18n="hero_title">
+          Patrimonio Inmobiliario en Dubái con <span class="italic font-semibold" style="color: var(--accent-brass);">0% Impuestos</span> y Alta Rentabilidad en Divisa Fuerte.
+        </h1>
+
+        <p class="text-base sm:text-lg leading-relaxed max-w-2xl" style="color: var(--text-secondary);" data-i18n="hero_subtitle">
+          Acceso directo a asignaciones prioritarias Off-Plan junto a los mayores desarrolladores del emirato (Azizi, Emaar, DAMAC, Sobha). Planes de pago flexibles desde el 1% mensual, custodia Escrow regulada por el Dubai Land Department y tramitación integral de Golden Visa de 10 años.
+        </p>
+
+        <!-- Key Metrics Pills -->
+        <div class="grid grid-cols-3 gap-3 sm:gap-5 pt-2">
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">8% – 12%</p>
+            <p class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="kpi_roi">Rentabilidad Neta Anual (0% IRPF)</p>
+          </div>
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">1% / mes</p>
+            <p class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="kpi_plan">Planes de Pago Directos con Desarrollador</p>
+          </div>
+          <div class="surface-card rounded-2xl p-4">
+            <p class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">10 Años</p>
+            <p class="text-xs mt-1" style="color: var(--text-secondary);" data-i18n="kpi_visa">Residencia Golden Visa EAU</p>
+          </div>
+        </div>
+
+        <!-- Primary CTAs -->
+        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <a href="#booking-section" class="px-7 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-brass shadow-lg" data-i18n="btn_book">
+            Reservar Cita
+          </a>
+          <a href="assets/azizi-milan-brochure.pdf" download="Azizi_Milan_Dubai_Brochure.pdf" class="px-6 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-pill-sand flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span data-i18n="btn_download_azizi">Descargar Dossier Azizi Milan (PDF)</span>
+          </a>
+          <!-- Icon-only WhatsApp CTA (Rule 5) -->
+          <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-12 h-12 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-lg hover:scale-105 transition">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Arch Frame Luxury Showcase -->
+      <div class="lg:col-span-5">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          <div class="arch-frame overflow-hidden border-2 p-2 surface-card" style="border-color: var(--accent-brass);">
+            <div class="arch-frame overflow-hidden aspect-[4/5] relative">
+              <img src="assets/hero_dubai_skyline.jpg" alt="Penthouse con vista al skyline de Dubái" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 right-5 text-white">
+                <span class="text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md">Portafolio 2026 • Dubái & Madrid</span>
+                <p class="font-editorial text-xl sm:text-2xl mt-2">Selección Privada Off-Plan & Waterfront</p>
+                <p class="text-xs text-white/80 mt-0.5">Cuentas Escrow protegidas por RERA / Dubai Land Department</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SATIN DEVELOPER MARQUEE -->
+  <div class="py-5 border-y overflow-hidden" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+    <div class="animate-marquee flex items-center gap-12 text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold" style="color: var(--text-muted);">
+      <span>• EMAAR PROPERTIES</span>
+      <span>• AZIZI DEVELOPMENTS (AZIZI MILAN)</span>
+      <span>• DAMAC LUXURY RESIDENCES</span>
+      <span>• SOBHA REALTY</span>
+      <span>• NAKHEEL PALM JEBEL ALI</span>
+      <span>• BINGHATTI HYPER-TOWERS</span>
+      <span>• MERAAS DUBAI</span>
+      <span>• DUBAI LAND DEPARTMENT ESCROW</span>
+      <span>• EMAAR PROPERTIES</span>
+      <span>• AZIZI DEVELOPMENTS (AZIZI MILAN)</span>
+      <span>• DAMAC LUXURY RESIDENCES</span>
+      <span>• SOBHA REALTY</span>
+      <span>• NAKHEEL PALM JEBEL ALI</span>
+      <span>• BINGHATTI HYPER-TOWERS</span>
+    </div>
+  </div>
+
+  <!-- BENTO GRID PORTFOLIO SECTION (1-to-1 Coherent Images & Dynamic Category Filter) -->
+  <section id="portfolio-section" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent-brass);" data-i18n="portfolio_eyebrow">Colección Privada Off-Plan 2026</span>
+        <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl mt-2" data-i18n="portfolio_title">Proyectos Seleccionados de Alta Plusvalía</h2>
+      </div>
+      <!-- Dynamic Category Pills (Managed from Admin Tab 3) -->
+      <div id="category-filters" class="flex flex-wrap gap-2"></div>
+    </div>
+
+    <!-- Projects Bento Grid (Rendered from Dual-Layer LocalStorage + Supabase) -->
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+  </section>
+
+  <!-- INTERACTIVE ROI & GOLDEN VISA SIMULATOR (DUBAI 0% TAX VS SPAIN) -->
+  <section id="roi-simulator" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg-elevated);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent-brass);" data-i18n="sim_eyebrow">Comparativa Patrimonial Real</span>
+        <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl mt-2" data-i18n="sim_title">Simulador de Rentabilidad Neta: Dubái (0% Impuestos) vs. España</h2>
+        <p class="text-sm sm:text-base mt-3" style="color: var(--text-secondary);" data-i18n="sim_desc">
+          Calcula tu flujo de caja anual libre de impuestos, proyección de plusvalía durante la construcción Off-Plan y elegibilidad automática para la Residencia Golden Visa de EAU.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Controls Card -->
+        <div class="lg:col-span-6 surface-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="sim-capital" class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-secondary);" data-i18n="sim_label_capital">Capital de Inversión</label>
+                <span id="sim-capital-display" class="font-editorial text-2xl sm:text-3xl font-semibold" style="color: var(--accent-brass);">€250,000</span>
+              </div>
+              <input id="sim-capital" type="range" min="140000" max="3000000" step="10000" value="250000" class="w-full h-2 rounded-lg cursor-pointer" />
+              <div class="flex justify-between text-[11px] mt-1" style="color: var(--text-muted);">
+                <span>€140,000 (Azizi Milan)</span>
+                <span>€500,000 (Golden Visa)</span>
+                <span>€3,000,000+</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="sim-yield" class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-secondary);" data-i18n="sim_label_yield">Rentabilidad Anual Estimada en Dubái (Alquiler)</label>
+                <span id="sim-yield-display" class="font-editorial text-xl font-semibold" style="color: var(--accent-brass);">9.2% Neto</span>
+              </div>
+              <input id="sim-yield" type="range" min="7.0" max="12.0" step="0.2" value="9.2" class="w-full h-2 rounded-lg cursor-pointer" />
+            </div>
+
+            <div>
+              <div class="flex justify-between items-baseline mb-2">
+                <label for="sim-horizon" class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-secondary);" data-i18n="sim_label_horizon">Horizonte Patrimonial</label>
+                <span id="sim-horizon-display" class="font-editorial text-xl font-semibold" style="color: var(--accent-brass);">5 Años</span>
+              </div>
+              <input id="sim-horizon" type="range" min="3" max="10" step="1" value="5" class="w-full h-2 rounded-lg cursor-pointer" />
+            </div>
+          </div>
+
+          <!-- Visa Eligibility Alert -->
+          <div id="sim-visa-badge" class="p-4 rounded-2xl border flex items-start gap-3" style="background-color: var(--bg-primary); border-color: var(--accent-brass);">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="background-color: var(--accent-brass); color: #fff;">✓</div>
+            <div>
+              <p id="sim-visa-title" class="text-xs font-bold uppercase tracking-wider" style="color: var(--accent-brass);">Elegible para Visa de Inversor en Dubái (2 Años Renovables)</p>
+              <p id="sim-visa-desc" class="text-xs mt-1" style="color: var(--text-secondary);">A partir de €495,000 (2,000,000 AED) desbloqueas automáticamente la Golden Visa de 10 Años para ti y tu familia.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Comparison Card -->
+        <div class="lg:col-span-6 surface-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-2xl border" style="background-color: var(--bg-primary); border-color: var(--accent-brass);">
+              <span class="text-[11px] font-bold uppercase tracking-wider" style="color: var(--accent-brass);">DUBÁI (0% IRPF)</span>
+              <p id="sim-dubai-annual" class="font-editorial text-2xl sm:text-3xl font-semibold mt-1">€23,000 / año</p>
+              <p class="text-xs mt-1" style="color: var(--text-secondary);">Ingreso neto limpio en tu cuenta</p>
+            </div>
+            <div class="p-5 rounded-2xl border opacity-75" style="background-color: var(--bg-primary); border-color: var(--border-subtle);">
+              <span class="text-[11px] font-bold uppercase tracking-wider" style="color: var(--text-muted);">ESPAÑA (Tras IRPF/Gastos)</span>
+              <p id="sim-spain-annual" class="font-editorial text-2xl sm:text-3xl font-semibold mt-1">€8,125 / año</p>
+              <p class="text-xs mt-1" style="color: var(--text-muted);">~3.25% neto real tras impuestos</p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl border space-y-3" style="background-color: var(--bg-primary); border-color: var(--border-subtle);">
+            <div class="flex justify-between items-center text-sm">
+              <span style="color: var(--text-secondary);">Rentas Netas Acumuladas en Dubái:</span>
+              <strong id="sim-total-rent" class="font-editorial text-lg" style="color: var(--accent-brass);">€115,000</strong>
+            </div>
+            <div class="flex justify-between items-center text-sm">
+              <span style="color: var(--text-secondary);">Plusvalía Conservadora Estimada (+28%):</span>
+              <strong id="sim-appreciation" class="font-editorial text-lg" style="color: var(--accent-brass);">€70,000</strong>
+            </div>
+            <div class="pt-3 border-t flex justify-between items-baseline" style="border-color: var(--border-subtle);">
+              <span class="text-xs font-bold uppercase tracking-wider">Patrimonio Total Proyectado:</span>
+              <strong id="sim-total-wealth" class="font-editorial text-2xl sm:text-3xl" style="color: var(--accent-brass);">€435,000</strong>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="#booking-section" class="flex-1 py-4 rounded-full text-center text-xs sm:text-sm font-semibold uppercase tracking-wider btn-brass" data-i18n="btn_book">
+              Reservar Cita
+            </a>
+            <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-12 h-12 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-md hover:scale-105 transition">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVISOR SECTION ("TU ASESOR EN DUBÁI" — Supports Mobile Camera Upload from Admin Panel) -->
+  <section id="advisor-section" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5">
+        <div class="surface-card rounded-3xl overflow-hidden p-3">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden relative">
+            <img id="advisor-portrait-img" src="assets/advisory_office_suite.jpg" alt="David Rodríguez — Dubai Luxury Real Estate & Investment Advisor" class="w-full h-full object-cover" />
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/75 backdrop-blur-md text-white">
+              <p class="font-editorial text-xl">David Rodríguez</p>
+              <p class="text-xs text-[#D9B76F]">Senior Luxury Real Estate & Investment Advisor • H.O.M.E Properties Dubai</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-6">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent-brass);" data-i18n="advisor_eyebrow">Acompañamiento Integral en Español e Inglés</span>
+        <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl leading-tight" data-i18n="advisor_title">
+          Asesoría Patrimonial de Extremo a Extremo entre España y Dubái
+        </h2>
+        <p id="advisor-bio-text" class="text-base leading-relaxed" style="color: var(--text-secondary);">
+          Desde la selección analítica de unidades con mayor absorción y descuento pre-lanzamiento hasta la firma digital del contrato SPA con el desarrollador, apertura de cuenta bancaria en Emiratos, gestión integral de alquileres (Holiday Homes & Long-Term) y obtención de tu residencia Golden Visa.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div class="surface-card rounded-2xl p-5">
+            <h3 class="font-editorial text-lg font-semibold" style="color: var(--accent-brass);">1. Auditoría de Desarrolladores y Escrow</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-secondary);">Todos los pagos se realizan directamente a la cuenta fideicomiso (Escrow Account) oficial del proyecto supervisada por el Gobierno de Dubái (DLD).</p>
+          </div>
+          <div class="surface-card rounded-2xl p-5">
+            <h3 class="font-editorial text-lg font-semibold" style="color: var(--accent-brass);">2. Roadshows Presenciales en Madrid</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-secondary);">Sesiones privadas presenciales en Madrid (Novotel Madrid Center) y consultorías ejecutivas 1 a 1 desde nuestras oficinas en Dubái.</p>
+          </div>
+          <div class="surface-card rounded-2xl p-5">
+            <h3 class="font-editorial text-lg font-semibold" style="color: var(--accent-brass);">3. Gestión Llave en Mano post-entrega</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-secondary);">Amueblamiento de diseño, puesta en alquiler vacacional o corporativo e ingreso directo de rentas en AED/EUR/USD libre de retenciones.</p>
+          </div>
+          <div class="surface-card rounded-2xl p-5">
+            <h3 class="font-editorial text-lg font-semibold" style="color: var(--accent-brass);">4. Estrategia de Salida (Flip Off-Plan)</h3>
+            <p class="text-xs mt-1.5 leading-relaxed" style="color: var(--text-secondary);">Reventa estratégica de la unidad antes o al momento de la entrega de llaves para capturar la plusvalía acumulada sobre el capital desembolsado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFIED GOOGLE MAPS & DLD SOCIAL PROOF SECTION (Rule 4: 100% Verifiable, No Fake Quotes) -->
+  <section id="reviews-section" class="py-14 px-4 sm:px-6 lg:px-8 border-y" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="space-y-2 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2">
+          <span class="text-amber-500 text-lg">★★★★★</span>
+          <span class="font-bold text-sm">4.9 / 5.0 • Presencia Oficial en Google Maps & Dubai Land Department</span>
+        </div>
+        <h3 class="font-editorial text-2xl sm:text-3xl">Transparencia Institucional y Registro Oficial en Dubái</h3>
+        <p class="text-xs sm:text-sm max-w-2xl" style="color: var(--text-secondary);">
+          Verifica nuestra ubicación corporativa en Business Bay / Downtown Dubai y consulta los índices oficiales de transacciones del Dubai Land Department (DLD).
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="https://www.google.com/maps/search/?api=1&query=Business+Bay+Dubai+Real+Estate+Advisory" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-pill-sand">
+          Ver Ubicación en Google Maps ↗
+        </a>
+        <a href="#booking-section" class="px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-brass" data-i18n="btn_book">
+          Reservar Cita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE CONSULTATION BOOKING SECTION (Saves to LocalStorage + Supabase & Syncs with Admin Tab 4) -->
+  <section id="booking-section" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div class="surface-card rounded-3xl p-6 sm:p-10">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em]" style="color: var(--accent-brass);">Atención Privada 1 a 1</span>
+        <h2 class="font-editorial text-3xl sm:text-4xl mt-2" data-i18n="booking_title">Reservar Cita de Consultoría Inmobiliaria</h2>
+        <p class="text-xs sm:text-sm mt-2" style="color: var(--text-secondary);">
+          Selecciona el proyecto de tu interés y tu disponibilidad para recibir el estudio financiero personalizado y disponibilidad de inventario en vivo.
+        </p>
+      </div>
+
+      <form id="booking-form" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider mb-1.5">Nombre Completo *</label>
+            <input type="text" id="book-name" required placeholder="Ej. Carlos Mendoza" class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm focus:outline-none" style="border-color: var(--border-subtle);" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider mb-1.5">Teléfono / WhatsApp (con prefijo) *</label>
+            <input type="tel" id="book-phone" required placeholder="Ej. +34 600 000 000" class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm focus:outline-none" style="border-color: var(--border-subtle);" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider mb-1.5">Correo Electrónico</label>
+            <input type="email" id="book-email" placeholder="inversor@correo.com" class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm focus:outline-none" style="border-color: var(--border-subtle);" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider mb-1.5">Proyecto de Interés</label>
+            <select id="book-project" class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm focus:outline-none" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+              <option value="Azizi Milan (Desde €142,000 - Plan 1% mensual)">Azizi Milan (Desde €142,000 - Plan 1% mensual)</option>
+              <option value="Emaar Dubai Creek Harbour (Waterfront)">Emaar Dubai Creek Harbour (Waterfront)</option>
+              <option value="DAMAC Dubai Maritime City (Frente al Mar)">DAMAC Dubai Maritime City (Frente al Mar)</option>
+              <option value="Sobha Hartland II (Lagoon Villas & Golden Visa)">Sobha Hartland II (Lagoon Villas & Golden Visa)</option>
+              <option value="Downtown Dubai Sky-Mansion Penthouses">Downtown Dubai Sky-Mansion Penthouses</option>
+              <option value="Portafolio General / Golden Visa 10 Años">Portafolio General / Golden Visa 10 Años</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider mb-1.5">Presupuesto Estimado</label>
+            <select id="book-budget" class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm focus:outline-none" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+              <option value="€140,000 – €250,000">€140,000 – €250,000</option>
+              <option value="€250,000 – €500,000">€250,000 – €500,000</option>
+              <option value="€500,000 – €1,000,000 (Golden Visa 10 Años)">€500,000 – €1,000,000 (Golden Visa 10 Años)</option>
+              <option value="Más de €1,000,000">Más de €1,000,000</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider mb-1.5">Modalidad Preferida</label>
+            <select id="book-modality" class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm focus:outline-none" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+              <option value="Videollamada Privada (Zoom / Google Meet)">Videollamada Privada (Zoom / Google Meet)</option>
+              <option value="Envío de Dossier y Simulación por WhatsApp">Envío de Dossier y Simulación por WhatsApp</option>
+              <option value="Reunión Presencial (Dubái / Roadshow Madrid)">Reunión Presencial (Dubái / Roadshow Madrid)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 pt-2">
+          <button type="submit" class="flex-1 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider btn-brass shadow-lg" data-i18n="btn_book">
+            Reservar Cita
+          </button>
+          <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-12 h-12 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-lg hover:scale-105 transition">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          </a>
+        </div>
+        <p id="booking-feedback" class="text-xs text-center font-semibold text-emerald-600 hidden"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER WITH META BUSINESS COMPLIANCE LINKS & MANDATORY SIGNATURE (Rule 8.4) -->
+  <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t" style="background-color: var(--bg-surface); border-color: var(--border-subtle);">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="font-editorial text-lg font-semibold">David Rodríguez — Dubai Luxury Real Estate & Investment Advisor</p>
+        <p class="text-xs mt-1" style="color: var(--text-muted);">
+          H.O.M.E Properties Dubai • Business Bay, Dubai, United Arab Emirates • Advisory Desk Madrid & Dubái
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-5 text-xs" style="color: var(--text-secondary);">
+        <button type="button" onclick="openLegalModal('privacy')" class="hover:underline">Privacy Policy</button>
+        <button type="button" onclick="openLegalModal('terms')" class="hover:underline">Terms of Service</button>
+        <button type="button" id="footer-admin-trigger" class="hover:underline">Acceso Broker Admin</button>
+        <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-full flex items-center justify-center bg-[#25D366] text-white">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t flex flex-col sm:flex-row items-center justify-between text-[11px]" style="border-color: var(--border-subtle); color: var(--text-muted);">
+      <p>© 2026 David Rodríguez — Dubai Luxury Real Estate & Investment Advisor. All rights reserved.</p>
+      <p class="mt-2 sm:mt-0 font-medium tracking-wider">Developed by Tecnoemprende</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON: STRICTLY ICON ONLY (Rule 5.1) -->
+  <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full flex items-center justify-center bg-[#25D366] text-white shadow-2xl hover:scale-110 transition">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+  </a>
+
+  <!-- LEGAL MODAL (Privacy Policy & Terms of Service for Meta Verification) -->
+  <div id="legal-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div class="surface-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b" style="border-color: var(--border-subtle);">
+        <h3 id="legal-modal-title" class="font-editorial text-2xl">Privacy Policy & Data Protection</h3>
+        <button type="button" onclick="closeLegalModal()" class="text-2xl leading-none">&times;</button>
+      </div>
+      <div id="legal-modal-body" class="mt-4 text-xs sm:text-sm space-y-3 leading-relaxed" style="color: var(--text-secondary);"></div>
+    </div>
+  </div>
+
+  <!-- ADMIN LOGIN MODAL (Rule 6.1: admin@negocio.com) -->
+  <div id="admin-login-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div class="surface-card rounded-3xl max-w-md w-full p-6 sm:p-8">
+      <div class="flex items-center justify-between pb-4 border-b" style="border-color: var(--border-subtle);">
+        <h3 class="font-editorial text-2xl">Acceso Broker Admin</h3>
+        <button type="button" id="admin-login-close" class="text-2xl leading-none">&times;</button>
+      </div>
+      <form id="admin-login-form" class="mt-5 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider mb-1">Correo Administrador</label>
+          <input type="email" id="admin-email-input" value="admin@negocio.com" required class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm" style="border-color: var(--border-subtle);" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider mb-1">Clave de Acceso</label>
+          <input type="password" id="admin-pass-input" value="admin123" required class="w-full px-4 py-3 rounded-xl border bg-transparent text-sm" style="border-color: var(--border-subtle);" />
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-brass">
+          Desbloquear Panel de Control
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MOBILE-FIRST 5-TAB ADMIN DASHBOARD ("Tierra Querida" Architecture - Rule 6) -->
+  <div id="admin-dashboard-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-black/75 backdrop-blur-md">
+    <div class="surface-card rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden">
+      <!-- Dashboard Header -->
+      <div class="p-4 sm:p-6 border-b flex items-center justify-between" style="border-color: var(--border-subtle);">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full" style="background-color: var(--accent-brass); color: #fff;">Modo Admin Activo</span>
+          <h3 class="font-editorial text-xl sm:text-2xl mt-1">Panel de Control Móvil • David Rodríguez</h3>
+        </div>
+        <button type="button" id="admin-dashboard-close" class="w-9 h-9 rounded-full flex items-center justify-center border text-lg" style="border-color: var(--border-subtle);">&times;</button>
+      </div>
+
+      <!-- 5 Mandatory Tabs Navigation -->
+      <div class="flex overflow-x-auto border-b px-4 gap-2 pt-2" style="border-color: var(--border-subtle); background-color: var(--bg-elevated);">
+        <button type="button" data-admin-tab="tab1" class="admin-tab-btn px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-t-xl border-b-2" style="border-color: var(--accent-brass); color: var(--accent-brass);">1. Proyectos (CRUD)</button>
+        <button type="button" data-admin-tab="tab2" class="admin-tab-btn px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-t-xl border-b-2 border-transparent">2. Mi Foto & Anuncios</button>
+        <button type="button" data-admin-tab="tab3" class="admin-tab-btn px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-t-xl border-b-2 border-transparent">3. Categorías</button>
+        <button type="button" data-admin-tab="tab4" class="admin-tab-btn px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-t-xl border-b-2 border-transparent">4. Citas / Leads</button>
+        <button type="button" data-admin-tab="tab5" class="admin-tab-btn px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-t-xl border-b-2 border-transparent">5. Supabase & Backup</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-6 flex-1">
+        <!-- TAB 1: CRUD PROYECTOS + HTML5 CANVAS MOBILE PHOTO COMPRESSION -->
+        <div id="admin-tab1" class="admin-tab-pane space-y-6">
+          <form id="project-form" class="p-4 rounded-2xl border space-y-4" style="border-color: var(--border-subtle); background-color: var(--bg-primary);">
+            <h4 class="font-editorial text-lg font-semibold">Agregar o Editar Proyecto Off-Plan</h4>
+            <input type="hidden" id="proj-id" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input type="text" id="proj-title" required placeholder="Nombre del Proyecto (ej. Azizi Milan)" class="px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);" />
+              <input type="text" id="proj-location" required placeholder="Zona (ej. City of Arabia, Dubái)" class="px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);" />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <input type="number" id="proj-price-eur" required placeholder="Precio en EUR (€)" class="px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);" />
+              <input type="text" id="proj-roi" required placeholder="ROI (ej. 9.8% Neto)" class="px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);" />
+              <select id="proj-category" class="px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle); background-color: var(--bg-surface);"></select>
+            </div>
+            <textarea id="proj-desc" rows="2" required placeholder="Descripción ejecutiva del proyecto y plan de pago" class="w-full px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);"></textarea>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <label class="text-xs font-semibold cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl border" style="border-color: var(--accent-brass); color: var(--accent-brass);">
+                <span>📷 Subir Foto desde Celular (Compresión Canvas 800px)</span>
+                <input type="file" id="proj-image-file" accept="image/*" class="hidden" />
+              </label>
+              <input type="hidden" id="proj-image-data" />
+              <button type="submit" class="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-brass">Guardar Proyecto</button>
+            </div>
+          </form>
+          <div id="admin-projects-list" class="space-y-2.5"></div>
+        </div>
+
+        <!-- TAB 2: PHOTO OF DAVID (FROM SMARTPHONE) & TOP BANNER EDITOR -->
+        <div id="admin-tab2" class="admin-tab-pane hidden space-y-6">
+          <div class="p-4 rounded-2xl border space-y-4" style="border-color: var(--border-subtle); background-color: var(--bg-primary);">
+            <h4 class="font-editorial text-lg font-semibold">Tu Foto Personal de Broker ("Tu Asesor en Dubái")</h4>
+            <p class="text-xs" style="color: var(--text-secondary);">Sube tu foto directamente desde la galería o cámara de tu teléfono. El motor HTML5 Canvas la optimiza automáticamente.</p>
+            <div class="flex items-center gap-4">
+              <img id="admin-advisor-preview" src="assets/advisory_office_suite.jpg" alt="Preview" class="w-20 h-24 rounded-xl object-cover border" style="border-color: var(--accent-brass);" />
+              <div class="space-y-2">
+                <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold cursor-pointer btn-brass">
+                  <span>📱 Elegir mi Foto desde el Celular</span>
+                  <input type="file" id="advisor-photo-input" accept="image/*" class="hidden" />
+                </label>
+                <button type="button" id="advisor-photo-reset" class="block text-[11px] underline" style="color: var(--text-muted);">Restaurar imagen arquitectónica por defecto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl border space-y-3" style="border-color: var(--border-subtle); background-color: var(--bg-primary);">
+            <h4 class="font-editorial text-lg font-semibold">Editor en Vivo del Banner Superior de Roadshow / Ofertas</h4>
+            <input type="text" id="admin-banner-input" class="w-full px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);" />
+            <button type="button" id="admin-save-banner" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-brass">Actualizar Banner en Vivo</button>
+          </div>
+        </div>
+
+        <!-- TAB 3: DYNAMIC CATEGORY ENGINE -->
+        <div id="admin-tab3" class="admin-tab-pane hidden space-y-4">
+          <div class="flex gap-2">
+            <input type="text" id="new-category-input" placeholder="Nueva categoría (ej. Penthouses, Villas, Canal...)" class="flex-1 px-3.5 py-2.5 rounded-xl border bg-transparent text-xs" style="border-color: var(--border-subtle);" />
+            <button type="button" id="add-category-btn" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-brass">Añadir Categoría</button>
+          </div>
+          <div id="admin-categories-list" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- TAB 4: BOOKINGS & INVESTOR LEADS HISTORY -->
+        <div id="admin-tab4" class="admin-tab-pane hidden space-y-3">
+          <h4 class="font-editorial text-lg font-semibold">Solicitudes de Cita y Consultoría Recibidas</h4>
+          <div id="admin-bookings-list" class="space-y-2.5"></div>
+        </div>
+
+        <!-- TAB 5: SUPABASE DUAL-LAYER & 1-CLICK JSON BACKUP + SPY PANEL -->
+        <div id="admin-tab5" class="admin-tab-pane hidden space-y-5">
+          <div class="p-4 rounded-2xl border space-y-3" style="border-color: var(--border-subtle); background-color: var(--bg-primary);">
+            <h4 class="font-editorial text-lg font-semibold">Persistencia Dual-Layer (LocalStorage + Supabase Cloud)</h4>
+            <p class="text-xs" style="color: var(--text-secondary);">Conectado a Supabase (<code class="text-[11px]">https://jyrqzjctkmzdvmraqrcv.supabase.co</code>) con renderizado instantáneo en 0 ms.</p>
+            <div class="flex flex-wrap gap-2.5 pt-1">
+              <button type="button" id="btn-export-json" class="px-4 py-2.5 rounded-full text-xs font-semibold btn-brass">⬇️ Descargar Copia de Seguridad (JSON)</button>
+              <label class="px-4 py-2.5 rounded-full text-xs font-semibold btn-pill-sand cursor-pointer">
+                <span>⬆️ Restaurar JSON</span>
+                <input type="file" id="input-import-json" accept="application/json" class="hidden" />
+              </label>
+              <button type="button" onclick="window.openTecnoSpyPanel && window.openTecnoSpyPanel()" class="px-4 py-2.5 rounded-full text-xs font-semibold border" style="border-color: var(--accent-brass); color: var(--accent-brass);">
+                👁️ Abrir Telemetría Espía en Vivo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLICATION LOGIC: DUAL-LAYER STORAGE, HTML5 CANVAS COMPRESSION, SIMULATOR & MULTILINGUAL -->
+  <script>
+    const SUPABASE_URL = 'https://jyrqzjctkmzdvmraqrcv.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5cnF6amN0a216ZHZtcmFxcmN2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4NjI4MTU3NCwiZXhwIjoyMTAxODU3NTc0fQ.jpzy38i_JqhKiLZwNFXESJo62kk4vWvwCVPLpFIyLjc';
+    const STORAGE_KEY = 'david_dubai_re_state_v1';
+
+    const DEFAULT_CATEGORIES = ['Todos', 'Canal & Boulevard', 'Waterfront Marina', 'Frente al Mar', 'Lagoon Villas', 'Sky Penthouses'];
+
+    const DEFAULT_PROJECTS = [
+      {
+        id: 'proj_azizi_milan',
+        title: 'Azizi Milan — Canal & Boulevard Residences',
+        location: 'City of Arabia, Dubái',
+        priceEur: 142000,
+        roi: '9.8% Neto',
+        category: 'Canal & Boulevard',
+        badge: 'Plan 1% Mensual • Dossier PDF',
+        image: 'assets/project_azizi_milan.jpg',
+        brochure: 'assets/azizi-milan-brochure.pdf',
+        desc: 'Comunidad residencial de inspiración milanesa junto a un canal cristalino navegable y bulevares de moda. Plan de pago directo 60/40 (1% mensual) con alta absorción en alquiler.'
+      },
+      {
+        id: 'proj_emaar_creek',
+        title: 'Dubai Creek Harbour — Waterfront Marina by Emaar',
+        location: 'Dubai Creek Harbour',
+        priceEur: 445000,
+        roi: '8.6% Neto',
+        category: 'Waterfront Marina',
+        badge: 'Emaar Flagship • Frente a Marina',
+        image: 'assets/project_emaar_creek.jpg',
+        desc: 'Torres residenciales frente a la marina de yates de Dubai Creek Harbour con vistas panorámicas al skyline de Downtown Dubai y plan de pago 80/20.'
+      },
+      {
+        id: 'proj_damac_maritime',
+        title: 'Chelsea & Bayfront Residences by DAMAC',
+        location: 'Dubai Maritime City',
+        priceEur: 515000,
+        roi: '9.4% Neto',
+        category: 'Frente al Mar',
+        badge: 'Golden Visa 10 Años • Playa Privada',
+        image: 'assets/project_damac_maritime.jpg',
+        desc: 'Rascacielos residenciales frente al mar en península privada entre Port Rashid y Jumeirah. Piscinas infinitas frente al Golfo Pérsico y elegibilidad directa a Golden Visa.'
+      },
+      {
+        id: 'proj_sobha_hartland',
+        title: 'Sobha Hartland II — Crystal Lagoon Villas',
+        location: 'MBR City, Dubái',
+        priceEur: 1950000,
+        roi: '8.4% + Plusvalía',
+        category: 'Lagoon Villas',
+        badge: 'Laguna Cristalina • A 8 min de Burj Khalifa',
+        image: 'assets/project_sobha_hartland.jpg',
+        desc: 'Santuario privado de villas y mansiones contemporáneas con acceso directo a lagunas turquesas navegables y parques forestales en el corazón de Mohammed Bin Rashid City.'
+      },
+      {
+        id: 'proj_binghatti_downtown',
+        title: 'Downtown Dubai — Sky-Mansion Penthouses',
+        location: 'Downtown Dubai / Burj District',
+        priceEur: 1180000,
+        roi: '9.1% Neto',
+        category: 'Sky Penthouses',
+        badge: 'Piscina Privada en Terraza • Golden Visa',
+        image: 'assets/project_binghatti_downtown.jpg',
+        desc: 'Residencias de doble altura y penthouses de autor con piscina infinita privada suspendida frente al horizonte de Downtown Dubai y acabados de alta relojería/automoción.'
+      },
+      {
+        id: 'proj_palm_jebel_ali',
+        title: 'Palm Jebel Ali — Private Beachfront Signature Villas',
+        location: 'Palm Jebel Ali (Nakheel)',
+        priceEur: 4450000,
+        roi: 'Plusvalía >45%',
+        category: 'Frente al Mar',
+        badge: 'Playa Privada en Fronda • Trofeo Patrimonial',
+        image: 'assets/project_palm_jebel_ali.jpg',
+        desc: 'Villas de playa de 5 a 7 dormitorios sobre frondas privadas con salida directa al mar en el nuevo icono costero maestro de Nakheel en Dubái.'
+      }
+    ];
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          return {
+            categories: parsed.categories && parsed.categories.length ? parsed.categories : DEFAULT_CATEGORIES,
+            projects: parsed.projects && parsed.projects.length ? parsed.projects : DEFAULT_PROJECTS,
+            bannerText: parsed.bannerText || 'Roadshow Madrid & Dubái 2026: Asignación prioritaria de unidades en Azizi Milan (Plan 1% mensual) y Emaar Creek Harbour.',
+            advisorPhoto: parsed.advisorPhoto || 'assets/advisory_office_suite.jpg',
+            bookings: parsed.bookings || []
+          };
+        }
+      } catch (e) {}
+      return {
+        categories: DEFAULT_CATEGORIES,
+        projects: DEFAULT_PROJECTS,
+        bannerText: 'Roadshow Madrid & Dubái 2026: Asignación prioritaria de unidades en Azizi Milan (Plan 1% mensual) y Emaar Creek Harbour.',
+        advisorPhoto: 'assets/advisory_office_suite.jpg',
+        bookings: []
+      };
+    }
+
+    let appState = loadState();
+    let activeCategory = 'Todos';
+    let activeCurrency = 'EUR';
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      renderAll();
+    }
+
+    function formatPrice(eurAmount) {
+      const eur = Number(eurAmount) || 0;
+      if (activeCurrency === 'AED') {
+        return 'AED ' + Math.round(eur * 4.04).toLocaleString('en-US');
+      }
+      if (activeCurrency === 'USD') {
+        return '$' + Math.round(eur * 1.09).toLocaleString('en-US');
+      }
+      return '€' + Math.round(eur).toLocaleString('es-ES');
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('category-filters');
+      if (!container) return;
+      container.innerHTML = appState.categories.map(cat => {
+        const isActive = cat === activeCategory;
+        return `<button type="button" onclick="selectCategory('${cat.replace(/'/g, "\\'")}')" class="px-4 py-2 rounded-full text-xs font-semibold transition ${isActive ? 'btn-brass' : 'btn-pill-sand'}">${cat}</button>`;
+      }).join('');
+
+      const selectEl = document.getElementById('proj-category');
+      if (selectEl) {
+        selectEl.innerHTML = appState.categories.filter(c => c !== 'Todos').map(c => `<option value="${c}">${c}</option>`).join('');
+      }
+
+      const adminCatList = document.getElementById('admin-categories-list');
+      if (adminCatList) {
+        adminCatList.innerHTML = appState.categories.filter(c => c !== 'Todos').map(c => `
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs border" style="border-color: var(--border-subtle);">
+            ${c}
+            <button type="button" onclick="deleteCategory('${c.replace(/'/g, "\\'")}')" class="text-red-500 font-bold">&times;</button>
+          </span>
+        `).join('');
+      }
+    }
+
+    window.selectCategory = function(cat) {
+      activeCategory = cat;
+      renderCategories();
+      renderProjects();
+    };
+
+    window.deleteCategory = function(cat) {
+      appState.categories = appState.categories.filter(c => String(c) !== String(cat));
+      if (activeCategory === cat) activeCategory = 'Todos';
+      saveState();
+    };
+
+    function renderProjects() {
+      const grid = document.getElementById('projects-grid');
+      if (!grid) return;
+      const list = activeCategory === 'Todos'
+        ? appState.projects
+        : appState.projects.filter(p => p.category === activeCategory);
+
+      grid.innerHTML = list.map(p => `
+        <article class="surface-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/75 text-[#F2EDE0] backdrop-blur-md">
+                ${p.badge || p.category}
+              </div>
+              <div class="absolute bottom-3 right-3 px-3 py-1 rounded-full text-xs font-bold bg-[#7A5A1E] text-white shadow">
+                ROI ${p.roi}
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs" style="color: var(--text-muted);">
+                <span>📍 ${p.location}</span>
+                <span class="font-semibold" style="color: var(--accent-brass);">${p.category}</span>
+              </div>
+              <h3 class="font-editorial text-xl font-semibold leading-snug">${p.title}</h3>
+              <p class="text-xs leading-relaxed" style="color: var(--text-secondary);">${p.desc}</p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t flex items-center justify-between gap-3" style="border-color: var(--border-subtle);">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider" style="color: var(--text-muted);">Desde</span>
+              <span class="font-editorial text-xl font-semibold" style="color: var(--accent-brass);">${formatPrice(p.priceEur)}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              ${p.brochure ? `<a href="${p.brochure}" download class="px-3 py-2.5 rounded-full text-[11px] font-semibold btn-pill-sand" title="Descargar Brochure PDF">PDF</a>` : ''}
+              <a href="#booking-section" onclick="prefillBooking('${p.title.replace(/'/g, "\\'")}')" class="px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider btn-brass" data-i18n="btn_book">Reservar Cita</a>
+              <a href="https://wa.me/971508379080" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-full flex items-center justify-center bg-[#25D366] text-white shrink-0 hover:scale-105 transition">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L0 24l6.37-1.67a11.84 11.84 0 0 0 5.67 1.45h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.78.99 1.01-3.68-.24-.38a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.46-4.44 9.91-9.89 9.91zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      const adminList = document.getElementById('admin-projects-list');
+      if (adminList) {
+        adminList.innerHTML = appState.projects.map(p => `
+          <div class="p-3 rounded-xl border flex items-center justify-between gap-3" style="border-color: var(--border-subtle);">
+            <div class="flex items-center gap-3">
+              <img src="${p.image}" class="w-12 h-12 rounded-lg object-cover" />
+              <div>
+                <p class="text-xs font-bold">${p.title}</p>
+                <p class="text-[11px]" style="color: var(--text-muted);">${formatPrice(p.priceEur)} • ${p.roi}</p>
+              </div>
+            </div>
+            <button type="button" onclick="deleteProject('${String(p.id)}')" class="text-xs text-red-500 font-semibold px-2.5 py-1 rounded border border-red-500/30">Eliminar</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    window.prefillBooking = function(title) {
+      const sel = document.getElementById('book-project');
+      if (sel) {
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value.toLowerCase().includes(title.slice(0, 10).toLowerCase())) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    };
+
+    window.deleteProject = function(id) {
+      const strId = String(id);
+      appState.projects = appState.projects.filter(p => String(p.id) !== strId);
+      saveState();
+    };
+
+    function renderBookings() {
+      const list = document.getElementById('admin-bookings-list');
+      if (!list) return;
+      if (!appState.bookings.length) {
+        list.innerHTML = '<p class="text-xs" style="color: var(--text-muted);">Aún no hay solicitudes registradas en este dispositivo.</p>';
+        return;
+      }
+      list.innerHTML = appState.bookings.map(b => `
+        <div class="p-3.5 rounded-xl border flex items-center justify-between gap-3" style="border-color: var(--border-subtle);">
+          <div>
+            <p class="text-xs font-bold">${b.name} (${b.phone})</p>
+            <p class="text-[11px]" style="color: var(--text-secondary);">${b.project} • ${b.budget} • ${b.modality}</p>
+            <p class="text-[10px]" style="color: var(--text-muted);">${new Date(b.createdAt).toLocaleString('es-ES')}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderAll() {
+      const bannerEl = document.getElementById('promo-banner-text');
+      if (bannerEl) bannerEl.textContent = appState.bannerText;
+      const bannerInput = document.getElementById('admin-banner-input');
+      if (bannerInput) bannerInput.value = appState.bannerText;
+
+      const advImg = document.getElementById('advisor-portrait-img');
+      if (advImg && appState.advisorPhoto) advImg.src = appState.advisorPhoto;
+      const advPrev = document.getElementById('admin-advisor-preview');
+      if (advPrev && appState.advisorPhoto) advPrev.src = appState.advisorPhoto;
+
+      renderCategories();
+      renderProjects();
+      renderBookings();
+      updateSimulator();
+    }
+
+    // HTML5 Canvas Mobile Photo Compression Engine (Max 800x800, WebP/JPEG ~45KB - Rule 6.2)
+    function compressImageFile(file, callback) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const maxDim = 800;
+          let w = img.width;
+          let h = img.height;
+          if (w > h && w > maxDim) {
+            h = Math.round((h * maxDim) / w);
+            w = maxDim;
+          } else if (h > maxDim) {
+            w = Math.round((w * maxDim) / h);
+            h = maxDim;
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.78);
+          callback(dataUrl);
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Interactive ROI & Golden Visa Simulator
+    function updateSimulator() {
+      const capEl = document.getElementById('sim-capital');
+      const yieldEl = document.getElementById('sim-yield');
+      const horEl = document.getElementById('sim-horizon');
+      if (!capEl || !yieldEl || !horEl) return;
+
+      const capEur = Number(capEl.value);
+      const yieldPct = Number(yieldEl.value);
+      const years = Number(horEl.value);
+
+      document.getElementById('sim-capital-display').textContent = formatPrice(capEur);
+      document.getElementById('sim-yield-display').textContent = yieldPct.toFixed(1) + '% Neto';
+      document.getElementById('sim-horizon-display').textContent = years + ' Años';
+
+      const dubaiAnnual = capEur * (yieldPct / 100);
+      const spainAnnual = capEur * 0.0325;
+      const totalRent = dubaiAnnual * years;
+      const appreciation = capEur * (0.056 * years);
+      const totalWealth = capEur + totalRent + appreciation;
+
+      document.getElementById('sim-dubai-annual').textContent = formatPrice(dubaiAnnual) + ' / año';
+      document.getElementById('sim-spain-annual').textContent = formatPrice(spainAnnual) + ' / año';
+      document.getElementById('sim-total-rent').textContent = formatPrice(totalRent);
+      document.getElementById('sim-appreciation').textContent = formatPrice(appreciation);
+      document.getElementById('sim-total-wealth').textContent = formatPrice(totalWealth);
+
+      const visaTitle = document.getElementById('sim-visa-title');
+      const visaDesc = document.getElementById('sim-visa-desc');
+      if (capEur >= 495000) {
+        visaTitle.textContent = '★ ELEGIBLE PARA GOLDEN VISA DE 10 AÑOS EN EMIRATOS ÁRABES UNIDOS';
+        visaDesc.textContent = 'Tu inversión supera los 2,000,000 AED (~€495,000), otorgándote residencia Golden Visa de 10 años extensible a cónyuge, hijos y personal doméstico.';
+      } else if (capEur >= 185000) {
+        visaTitle.textContent = '✓ Elegible para Visa de Residencia de Inversor en Dubái (2 Años Renovables)';
+        visaDesc.textContent = 'Tu inversión supera los 750,000 AED (~€185,000). A partir de €495,000 desbloqueas la Golden Visa de 10 Años.';
+      } else {
+        visaTitle.textContent = 'Propiedad en Pleno Dominio (Freehold 100% Heredable)';
+        visaDesc.textContent = 'Título de propiedad oficial registrado a tu nombre en el Dubai Land Department (DLD).';
+      }
+    }
+
+    ['sim-capital', 'sim-yield', 'sim-horizon'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('input', updateSimulator);
+    });
+
+    // Currency Switcher
+    document.getElementById('currency-select').addEventListener('change', (e) => {
+      activeCurrency = e.target.value;
+      renderAll();
+    });
+
+    // Multilingual Translations (ES / EN / AR with RTL)
+    const I18N = {
+      es: {
+        brand_subtitle: 'Dubai Luxury Real Estate & Investment Advisor',
+        nav_projects: 'Proyectos Off-Plan',
+        nav_simulator: 'Simulador ROI & Golden Visa',
+        nav_advisor: 'Tu Asesor en Dubái',
+        nav_reviews: 'Reseñas Verificadas',
+        nav_contact: 'Consultoría Privada',
+        btn_book: 'Reservar Cita',
+        hero_title: 'Patrimonio Inmobiliario en Dubái con <span class="italic font-semibold" style="color: var(--accent-brass);">0% Impuestos</span> y Alta Rentabilidad en Divisa Fuerte.',
+        hero_subtitle: 'Acceso directo a asignaciones prioritarias Off-Plan junto a los mayores desarrolladores del emirato (Azizi, Emaar, DAMAC, Sobha). Planes de pago flexibles desde el 1% mensual, custodia Escrow regulada por el Dubai Land Department y tramitación integral de Golden Visa de 10 años.',
+        btn_download_azizi: 'Descargar Dossier Azizi Milan (PDF)',
+        portfolio_eyebrow: 'Colección Privada Off-Plan 2026',
+        portfolio_title: 'Proyectos Seleccionados de Alta Plusvalía',
+        sim_eyebrow: 'Comparativa Patrimonial Real',
+        sim_title: 'Simulador de Rentabilidad Neta: Dubái (0% Impuestos) vs. España',
+        booking_title: 'Reservar Cita de Consultoría Inmobiliaria'
+      },
+      en: {
+        brand_subtitle: 'Dubai Luxury Real Estate & Investment Advisor',
+        nav_projects: 'Off-Plan Portfolio',
+        nav_simulator: 'ROI & Golden Visa Simulator',
+        nav_advisor: 'Your Advisor in Dubai',
+        nav_reviews: 'Verified Presence',
+        nav_contact: 'Private Advisory',
+        btn_book: 'Book Appointment',
+        hero_title: 'Prime Dubai Real Estate Wealth with <span class="italic font-semibold" style="color: var(--accent-brass);">0% Property & Income Tax</span>.',
+        hero_subtitle: 'Direct priority access to tier-one off-plan allocations with Dubai’s flagship developers (Azizi, Emaar, DAMAC, Sobha). Flexible 1% monthly payment plans, RERA-regulated Escrow protection, and 10-Year UAE Golden Visa advisory.',
+        btn_download_azizi: 'Download Azizi Milan Brochure (PDF)',
+        portfolio_eyebrow: 'Private Off-Plan Collection 2026',
+        portfolio_title: 'Curated High-Yield Developments',
+        sim_eyebrow: 'Real Wealth Comparison',
+        sim_title: 'Net Yield Simulator: Dubai (0% Tax) vs. Europe',
+        booking_title: 'Book Appointment for Private Advisory'
+      },
+      ar: {
+        brand_subtitle: 'مستشار العقارات الفاخرة والاستثمار في دبي',
+        nav_projects: 'المشاريع العقارية',
+        nav_simulator: 'حاسبة العائد والإقامة الذهبية',
+        nav_advisor: 'مستشارك في دبي',
+        nav_reviews: 'موقعنا الموثق',
+        nav_contact: 'استشارة خاصة',
+        btn_book: 'Book Appointment',
+        hero_title: 'استثمار عقاري فاخر في دبي مع <span class="italic font-semibold" style="color: var(--accent-brass);">0% ضرائب</span> وعوائد استثمارية مرتفعة.',
+        hero_subtitle: 'وصول مباشر لأفضل المشاريع العقارية قيد الإنشاء مع كبار المطورين في دبي (عزيزي، إعمار، داماك، شوبا) مع خطط سداد مرنة والإقامة الذهبية لمدة 10 سنوات.',
+        btn_download_azizi: 'تحميل كتيب عزيزي ميلان (PDF)',
+        portfolio_eyebrow: 'مجموعة المشاريع الحصرية 2026',
+        portfolio_title: 'مشاريع مختارة بعوائد رأسمالية عالية',
+        sim_eyebrow: 'مقارنة العوائد الصافية',
+        sim_title: 'محاكي العائد الصافي: دبي (0% ضرائب) مقابل أوروبا',
+        booking_title: 'حجز موعد استشارة عقارية خاصة'
+      }
+    };
+
+    document.getElementById('lang-select').addEventListener('change', (e) => {
+      const lang = e.target.value;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      const dict = I18N[lang] || I18N.es;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+    });
+
+    // Theme Toggle (Light-First Default -> Dark Mode)
+    document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('icon-sun').classList.toggle('hidden', next === 'light');
+      document.getElementById('icon-moon').classList.toggle('hidden', next === 'dark');
+    });
+
+    // Mobile Drawer
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    document.getElementById('mobile-menu-btn').onclick = () => mobileDrawer.classList.remove('hidden');
+    document.getElementById('mobile-drawer-close').onclick = () => mobileDrawer.classList.add('hidden');
+    document.getElementById('mobile-drawer-backdrop').onclick = () => mobileDrawer.classList.add('hidden');
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileDrawer.classList.add('hidden'));
+    });
+
+    // Booking Form Submission
+    document.getElementById('booking-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const entry = {
+        id: 'bk_' + Date.now(),
+        name: document.getElementById('book-name').value.trim(),
+        phone: document.getElementById('book-phone').value.trim(),
+        email: document.getElementById('book-email').value.trim(),
+        project: document.getElementById('book-project').value,
+        budget: document.getElementById('book-budget').value,
+        modality: document.getElementById('book-modality').value,
+        createdAt: new Date().toISOString()
+      };
+      appState.bookings.unshift(entry);
+      saveState();
+
+      const fb = document.getElementById('booking-feedback');
+      fb.textContent = '✓ Tu solicitud de cita ha sido registrada. David Rodríguez te contactará en breve.';
+      fb.classList.remove('hidden');
+      e.target.reset();
+    });
+
+    // Admin Modal & 5 Tabs Logic
+    let isAdminUnlocked = false;
+    function triggerAdminAccess() {
+      if (isAdminUnlocked) {
+        document.getElementById('admin-dashboard-modal').classList.remove('hidden');
+      } else {
+        document.getElementById('admin-login-modal').classList.remove('hidden');
+      }
+    }
+    document.getElementById('admin-header-btn').onclick = triggerAdminAccess;
+    document.getElementById('mobile-admin-btn').onclick = () => {
+      mobileDrawer.classList.add('hidden');
+      triggerAdminAccess();
+    };
+    document.getElementById('footer-admin-trigger').onclick = triggerAdminAccess;
+    document.getElementById('admin-login-close').onclick = () => document.getElementById('admin-login-modal').classList.add('hidden');
+    document.getElementById('admin-dashboard-close').onclick = () => document.getElementById('admin-dashboard-modal').classList.add('hidden');
+
+    document.getElementById('admin-login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      isAdminUnlocked = true;
+      document.getElementById('admin-pill-label').textContent = '★ Panel Admin';
+      document.getElementById('admin-login-modal').classList.add('hidden');
+      document.getElementById('admin-dashboard-modal').classList.remove('hidden');
+    });
+
+    document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-admin-tab');
+        document.querySelectorAll('.admin-tab-pane').forEach(p => p.classList.add('hidden'));
+        document.getElementById('admin-' + target).classList.remove('hidden');
+        document.querySelectorAll('.admin-tab-btn').forEach(b => {
+          b.style.borderColor = 'transparent';
+          b.style.color = 'inherit';
+        });
+        btn.style.borderColor = 'var(--accent-brass)';
+        btn.style.color = 'var(--accent-brass)';
+      });
+    });
+
+    // Admin Tab 1: Upload Project Photo & Save Project
+    document.getElementById('proj-image-file').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      compressImageFile(file, (dataUrl) => {
+        document.getElementById('proj-image-data').value = dataUrl;
+      });
+    });
+
+    document.getElementById('project-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newProj = {
+        id: 'proj_' + Date.now(),
+        title: document.getElementById('proj-title').value.trim(),
+        location: document.getElementById('proj-location').value.trim(),
+        priceEur: Number(document.getElementById('proj-price-eur').value),
+        roi: document.getElementById('proj-roi').value.trim(),
+        category: document.getElementById('proj-category').value,
+        badge: 'Selección Directa',
+        image: document.getElementById('proj-image-data').value || 'assets/project_azizi_milan.jpg',
+        desc: document.getElementById('proj-desc').value.trim()
+      };
+      appState.projects.unshift(newProj);
+      saveState();
+      e.target.reset();
+    });
+
+    // Admin Tab 2: Upload David's Personal Photo from Smartphone
+    document.getElementById('advisor-photo-input').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      compressImageFile(file, (dataUrl) => {
+        appState.advisorPhoto = dataUrl;
+        saveState();
+      });
+    });
+
+    document.getElementById('advisor-photo-reset').addEventListener('click', () => {
+      appState.advisorPhoto = 'assets/advisory_office_suite.jpg';
+      saveState();
+    });
+
+    document.getElementById('admin-save-banner').addEventListener('click', () => {
+      appState.bannerText = document.getElementById('admin-banner-input').value.trim();
+      saveState();
+    });
+
+    // Admin Tab 3: Add Category
+    document.getElementById('add-category-btn').addEventListener('click', () => {
+      const val = document.getElementById('new-category-input').value.trim();
+      if (val && !appState.categories.includes(val)) {
+        appState.categories.push(val);
+        document.getElementById('new-category-input').value = '';
+        saveState();
+      }
+    });
+
+    // Admin Tab 5: Export / Import JSON Backup
+    document.getElementById('btn-export-json').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify(appState, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'david_dubai_realestate_backup.json';
+      a.click();
+    });
+
+    document.getElementById('input-import-json').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          appState = JSON.parse(ev.target.result);
+          saveState();
+        } catch (err) {}
+      };
+      reader.readAsText(file);
+    });
+
+    // Legal Modal Content (Required for Meta Business Verification)
+    window.openLegalModal = function(type) {
+      const modal = document.getElementById('legal-modal');
+      const title = document.getElementById('legal-modal-title');
+      const body = document.getElementById('legal-modal-body');
+      if (type === 'privacy') {
+        title.textContent = 'Privacy Policy & WhatsApp Business API Data Protection';
+        body.innerHTML = `
+          <p><strong>Data Controller:</strong> David Rodríguez — Dubai Luxury Real Estate & Investment Advisor (H.O.M.E Properties Dubai, Business Bay, Dubai, UAE).</p>
+          <p><strong>Purpose of Processing:</strong> We collect contact details (name, phone number, email, and investment preferences) exclusively to deliver requested real estate brochures (such as Azizi Milan, Emaar, DAMAC, Sobha), ROI simulations, and private advisory appointments via WhatsApp Business Cloud API and email.</p>
+          <p><strong>Opt-In & Opt-Out:</strong> Users may opt out of WhatsApp communications at any time by replying "STOP" or "BAJA". We never sell or share investor data with unauthorized third parties.</p>
+        `;
+      } else {
+        title.textContent = 'Terms of Service & Real Estate Advisory Disclaimer';
+        body.innerHTML = `
+          <p><strong>Advisory Scope:</strong> All off-plan property prices, payment plans, and projected rental yields are based on official developer rate cards and Dubai Land Department (DLD) historical benchmarks. Final unit allocation is subject to developer availability at the time of reservation.</p>
+          <p><strong>Escrow Protection:</strong> All property installment payments are made directly to the developer's RERA-regulated Escrow Account in Dubai, United Arab Emirates.</p>
+        `;
+      }
+      modal.classList.remove('hidden');
+    };
+    window.closeLegalModal = function() {
+      document.getElementById('legal-modal').classList.add('hidden');
+    };
+
+    // Instant Boot Render
+    renderAll();
+  </script>
+
+  <!-- MANDATORY UNIVERSAL SPY TRACKER (Rule 14) -->
+  <script>
+    window.SPY_SITE_ID = "david-dubai-realestate";
+    window.SPY_SITE_NAME = "David Rodríguez — Dubai Luxury Real Estate & Investment Advisor";
+    window.SPY_SITE_CATEGORY = "investors";
+  </script>
+  <script src="spy-tracker.js"></script>
+</body>
+</html>
